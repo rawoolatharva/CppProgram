@@ -1,10 +1,12 @@
 #include <iostream>
 #include <string.h>
+using namespace std;
 class Emp
 {
     int eno;
     char name[10], address[20];
 
+    public:
     // we need a constructor to initialize our class variables
     Emp()
     {
@@ -22,11 +24,13 @@ class Emp
         cin>>name;
         cout<<"\n\tEnter address => ";
         cin>>address;
+        return 0;
     }
-    showData()
+    int showData()
     {
          // there is a "this" keyword that holds address of your current object address that is being called here and is applied internally
-        cout<<"\n\t"<<eno<<"  "<<name<<"  "<<address;
+        cout<<"\n\t"<<eno<<"  "<<name<<"  "<<address<<"\n";
+        return 0;
     }
 };
 int main()
