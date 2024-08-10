@@ -7,11 +7,13 @@ class Rectangle
     int length;
     int width;
     public:
-    // we will have our constructor with parameters here 
-    Rectangle(int l, int w)
+
+    void getLenNdWid()
     {
-       length = l;
-       width = w;
+        cout<<"\n\tPlease Enter Length of your Rectangle => ";
+        cin>>length;
+        cout<<"\n\tPlease Enter Width of your Rectangle => ";
+        cin>>width;
     }
     int area()
     {
@@ -24,7 +26,8 @@ class Rectangle
 };
 int main()
 {
-    Rectangle r1(6, 3);
+    Rectangle r1;
+    r1.getLenNdWid();
     cout<<"Area of your Rectangle is => "<<r1.area()<<"\n";
     cout<<"Perimeter of your Rectangle is => "<<r1.perimeter()<<"\n";
     return 0;

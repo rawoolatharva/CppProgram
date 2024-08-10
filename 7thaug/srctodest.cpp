@@ -6,10 +6,12 @@ class SrcToDestPrnt
     int src, dest;
     public:
     // we will have our constructor with parameters here 
-    SrcToDestPrnt(int s, int d)
+    void getSrcToDest()
     {
-       this -> src = s;
-       this -> dest = d;
+        cout<<"\n\tPlease Enter your Source Number => ";
+        cin>>src;
+        cout<<"\n\tPlease Enter your Destination Number => ";
+        cin>>dest;
     }
     int prnt()
     {
@@ -39,12 +41,8 @@ class SrcToDestPrnt
 };
 int main()
 {
-    int strt, end;
-    cout<<"\n\tPlease Enter your Start Number => ";
-    cin>>strt;
-    cout<<"\n\tPlease Enter your End Number => ";
-    cin>>end;
-    SrcToDestPrnt batch1( strt, end);
+    SrcToDestPrnt batch1;
+    batch1.getSrcToDest();
     batch1.prnt();
     return 0;
 }

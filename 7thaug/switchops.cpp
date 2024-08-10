@@ -6,13 +6,12 @@ class ArithematicOp
     int fno, sno;
     public:
     
-    int getNumbers()
+    void getNumbers()
     {
         cout<<"\n\tPlease Enter your First Integer Number => ";
         cin>>fno;
         cout<<"\n\tPlease Enter your Second Integer Number => ";
         cin>>sno;
-        return 0;
     }
     int add()
     {

@@ -5,11 +5,12 @@ class ArithematicOp
     private:
     int fno, sno;
     public:
-    // we will have our constructor with parameters here 
-    ArithematicOp(int f, int s)
+    void getNumbers()
     {
-       this -> fno = f;
-       this -> sno =  s;
+        cout<<"\n\tPlease Enter your First Integer Number => ";
+        cin>>fno;
+        cout<<"\n\tPlease Enter your Second Integer Number => ";
+        cin>>sno;
     }
     int add()
     {
@@ -34,7 +35,8 @@ class ArithematicOp
 };
 int main()
 {
-    ArithematicOp op1( 9, 4);
+    ArithematicOp op1;
+    op1.getNumbers();
     cout<<"Addition of your numbers is => "<<op1.add()<<"\n";
     cout<<"Subtraction of your numbers is => "<<op1.subtract()<<"\n";
     cout<<"Multiplication of your numbers is => "<<op1.multiply()<<"\n";
