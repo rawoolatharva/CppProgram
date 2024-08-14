@@ -7,7 +7,7 @@ class AttendanceCheck
        char candidateName[30];
 
     public:
-        void getNames()
+        void setNames()
         {
             cin>>candidateName;
         }
@@ -26,7 +26,7 @@ int main()
     cout<<"\n\tPlease Enter the names of the students who are present one by one => ";
     for (int i = 0; i < no; i++)
     {
-        a1[i].getNames();
+        a1[i].setNames();
     }
     cout<<"\n\tThe names of the students who are present one by one => ";
     for (int i = 0; i < no; i++)

@@ -1,3 +1,4 @@
+// contsructor overloading pgm
 #include <iostream>
 #include <cstring> //for strcpy
 using namespace std;
