@@ -1,0 +1,4 @@
+Inheritance :- is a concept of biology in which child acquires all the properties of parent and may add something new of its own.
+Also known as "is a" relationship.
+For example: - Square "is-a" rectangle because Square has all the properties of Rectangle i.e. 4 sides, 4 angles, opposite sides are same 
+and Square has its own additional property i.e. All sides are same.
