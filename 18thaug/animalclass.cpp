@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
 class Animal
 {
     protected:
@@ -55,6 +54,6 @@ int main()
 
     cat1.theirAge();
     cat1.sleep();
-    cout<<"\n"
+    cout<<"\n";
     return 0;
 }
