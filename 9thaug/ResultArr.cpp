@@ -9,28 +9,23 @@ class Result
     float percent;
 
     public:
-    void studentData()
-    {
-        cout<<"\n\tEnter Student Roll Number => ";
-        cin>>rollNo;
-        cout<<"\n\tEnter Student Name => ";
-        cin>>studentName;  
-        cout<<"\n\tEnter Student scored Percentage => ";
-        cin>>percent;  
-    }
-    void showDetails()
-    {
-        cout<<"\n\t"<<rollNo<<"  "<<studentName<<"  "<<percent<<"\%\n";
-    }
+    void studentData();
+    void showDetails();
 };
+#include "studFunc.h"
 int main()
 {
-    Result reportList[3];
-    reportList[0].studentData();
-    reportList[1].studentData();
-    reportList[2].studentData();
-    reportList[0].showDetails();
-    reportList[1].showDetails();
-    reportList[2].showDetails();
+    Result *reportList;
+    int no;
+    cout<<"\n\tHow many students report list u wanna make?";
+    cin>>no;
+    reportList= new Result[no];
+    for(int i=0; i < no; i++)
+    {
+        reportList[i].studentData();
+    }
+    cout<<"\n\tThese are the details of the students report card : ";
+    for(int j=0; j<no; j++)
+     reportList[j].showDetails();
     return 0;
 }

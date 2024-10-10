@@ -1,3 +1,4 @@
+// dynamic alloc for array of objects pgm   
 #include <iostream>
 #include <cstring> //for strcpy
 using namespace std;
@@ -14,7 +15,7 @@ class AttendanceCheck
         void showNames()
         {
             cout<<"\n\t"<<candidateName;
-        }       
+        }      
 };
 int main()
 {
@@ -22,6 +23,7 @@ int main()
     cout<<"How many candidates are present today? => ";
     cin>>no;
     AttendanceCheck *a1;
+    // dynamic memory allocation for this array of objects
     a1 = new AttendanceCheck[no];
     cout<<"\n\tPlease Enter the names of the students who are present one by one => ";
     for (int i = 0; i < no; i++)

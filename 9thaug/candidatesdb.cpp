@@ -1,3 +1,4 @@
+// scope operator for writing member functions outside of class
 #include <iostream>
 using namespace std;
 class CandidateDB
@@ -6,15 +7,17 @@ class CandidateDB
        char candidateName[30];
 
     public:
-        void setNames()
+        void setNames();
+        void showNames();       
+};
+    void CandidateDB::setNames()
         {
             cin>>candidateName;
         }
-        void showNames()
+    void CandidateDB::showNames()
         {
             cout<<"\n\t"<<candidateName;
-        }       
-};
+        }
 int main()
 {
     int no;

@@ -4,6 +4,7 @@ class ArithematicOp
 {
     private:
     int fno, sno;
+    
     public:
     void getNumbers()
     {

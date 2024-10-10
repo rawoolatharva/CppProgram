@@ -4,8 +4,8 @@ class SrcToDestPrnt
 {
     private:
     int src, dest;
+
     public:
-  
     void getSrcToDest()
     {
         cout<<"\n\tPlease Enter your Source Number => ";

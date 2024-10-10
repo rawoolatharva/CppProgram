@@ -1,4 +1,4 @@
-void Result::studentData()
+    void Result::studentData()
     {
         cout<<"\n\tEnter Student Roll Number => ";
         cin>>rollNo;

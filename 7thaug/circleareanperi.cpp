@@ -5,11 +5,9 @@ using namespace std;
 class Circle
 {
     private:
-
     float radius, ar, peri;
 
     public:
-
     void getRad()
     {
         cout<<"Please provide your radius in floating number => ";
