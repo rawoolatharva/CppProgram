@@ -4,7 +4,8 @@ using namespace std;
 class Shape //this becomes an abstract class
 {
     public:
-        virtual void save()= 0 //pure virtual method
+    //pure virtual method
+        virtual void save() = 0;
 };
 class Circle : public Shape
 {
@@ -33,12 +34,11 @@ class Pentagon : public Shape
 
 int main()
 {
-    Shape *arr[4]; //arr[0], arr[1], arr[2], arr[3]
+    Shape *arr[3]; //arr[0], arr[1], arr[2]
     arr[0] = new Circle();
     arr[1] = new Rectangle();
     arr[2] = new Pentagon();
-    arr[3] = new Shape();
-    for(int i =0; i < 4; i++)
+    for(int i =0; i < 3; i++)
         {
             arr[i]->save();
         }

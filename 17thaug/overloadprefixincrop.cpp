@@ -11,13 +11,13 @@ public:
     { 
         num = 45; // Initialize num to 45
     }
-
+    
     void show() {
         cout <<" "<< num; // Display the value of num
     }
 
     // Overloading the prefix increment operator
-    Number& operator++() // No parameter for prefix
+    Number operator++() // No parameter for prefix
     { 
         ++num; // Increment the value of num
         return *this; // Return the current object by reference

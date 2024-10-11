@@ -4,7 +4,8 @@ using namespace std;
 class Xyz
 {
     public:
-        void show(int a)
+    // this virtual keyword for parent class func makes sure that the compiler waits for object creation 
+        virtual void show(int a)
         {
             a++;
             cout<<"\n\tValue is := "<<a;

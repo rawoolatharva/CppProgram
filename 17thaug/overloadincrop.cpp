@@ -15,6 +15,7 @@ class Number
         {
             cout<<" "<<num;
         }
+        
         Number operator++(int) //The function Number operator++(int) is defined to overload the postfix increment operator. The int parameter is used to differentiate it from the prefix increment operator.
         {
             Number temp = *this; //Inside the operator function, a temporary object temp is created to hold the current state of the object before the increment. This allows you to return the original value before it was incremented.

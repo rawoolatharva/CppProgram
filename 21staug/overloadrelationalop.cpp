@@ -7,7 +7,7 @@ class Number
     private:
         int num;
     public:
-        friend istream& operator>>(istream&, Number&);
+        friend void operator>>(istream&, Number&);
         int operator>(Number n)
         {
             if(num > n.num)
@@ -20,10 +20,9 @@ class Number
             }
         }    
 };
-istream& operator>>(istream &in, Number &n)
+void operator>>(istream &in, Number &n)
 {
     in>>n.num;
-    return in;
 }
 int main()
 {

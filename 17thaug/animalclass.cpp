@@ -1,4 +1,4 @@
-// inheritance with construtcor overloading
+// inheritance with constructor overloading
 #include <iostream>
 #include <string>
 using namespace std;

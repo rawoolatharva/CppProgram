@@ -9,31 +9,34 @@ class Complex
         int real, img;
     public:
         // friend declarations for operator overloading
-        friend operator>>(istream &in, Complex &c);
+        friend istream& operator>>(istream &, Complex &);
         // Use const for read-only access
-        friend operator<<(ostream &out, const Complex &c);    
+        friend ostream& operator<<(ostream &out, const Complex &c);    
 };
 // Definition of >> operator
-istream& operator>>(istream &in, Complex &c);
+istream& operator>>(istream &in, Complex &c)
 {
     in>>c.real;
     in>>c.img;
+    return in;
 }
 // Definition of << operator
-ostream& operator<<(ostream &out, const Complex &c);
+ostream& operator<<(ostream &out, const Complex &c)
 {
     out<<c.real<<" + "<<c.img<<"a";
+    return out;
 }
 int main()
 {
     Complex c1, c2;
-    cout<<"\n\tEnter first complex number:= ";
+    cout<<"\n\tEnter first complex number, first the real and then the img part:= ";
     cin>>c1; //this will be read as cin.operator>>(c1);
     /*"cin" is an object of "istream" class. But inside istream class, there is no such function present which takes paramter of type "Complex". Hence this expansion will fail , so further expansion will be --> operator>>(cin, c1); */
-    cout<<"\n\tEnter second complex number:= ";
+    cout<<"\n\tEnter second complex number, first the real and then the img part:= ";
     cin>>c2; // read as operator>>(cin, c2);
     cout<< "\n\tFirst Complex Number is => ";
     cout<<c1; //this will be read as cout.operator<<(c1);
+     cout<< "\n\tSecond Complex Number is => ";
     /* "cout" is an object of "ostream" class. But inside ostream class, there is no such func which will take parameter of type "Complex". Hence this expansion will fail, so further expansion will be --> operator<<(cout,c1) */
     cout<<c2; //will be read as operator<<(cout,c2);
     return 0;
