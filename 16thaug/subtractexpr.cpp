@@ -43,7 +43,7 @@ int main()
     cout<<"\n\tResult of e1 - e2 is := "; // 9a -4b - (3a - 2b) => 9a - 3a -4b + 2b => 6a - 2b;
     e3.showDet();
     e4 = e1 - 5; // e4 = e1.operator - (5)
-    //this expansion will take us to the overload = oper costructor to be c(9) => and this will find a single param constructor of our object class => it will then find the 2 param constructor where second param set as default.
+    //this expansion will take us to the overload = oper costructor to be c(9) => and this will find a single param constructor of our object class which is actually our param const with 2nd param set as 0 => it will then find the 2 param constructor where second param set as default.
     cout<<"\n\tResult of e1 - 5 is := "; // 9a - 4b -(5a - 0b) => 9a - 5a - 4b + 0b => 4a - 4b;
     e4.showDet();
     cout<<"\n";

@@ -1,4 +1,4 @@
-// multiplication of expressions having unlike terms.
+// multiplication of expressions having unlike terms, showcasing multiplication operator overload
 #include <iostream>
 using namespace std; 
 class Expr
