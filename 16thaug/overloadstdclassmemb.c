@@ -9,22 +9,20 @@ class Complex
         int real, img;
     public:
         // friend declarations for operator overloading
-        friend istream& operator>>(istream &, Complex &);
+        friend void operator>>(istream &, Complex &);
         // Use const for read-only access
-        friend ostream& operator<<(ostream &out, const Complex &c);    
+        friend void operator<<(ostream &, const Complex &);    
 };
 // Definition of >> operator
-istream& operator>>(istream &in, Complex &c)
+void operator>>(istream &in, Complex &c)
 {
     in>>c.real;
     in>>c.img;
-    return in;
 }
 // Definition of << operator
-ostream& operator<<(ostream &out, const Complex &c)
+void operator<<(ostream &out, const Complex &c)
 {
     out<<c.real<<" + "<<c.img<<"a";
-    return out;
 }
 int main()
 {
